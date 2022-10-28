@@ -1,0 +1,44 @@
+#sale {
+    display: none;
+    color: #212121;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#sale h1 {
+    text-align: center;
+}
+
+#sale .list-wrap {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 10px;
+    row-gap: 20px;
+    padding-top: 20px;
+}
+
+#sale .list-wrap .list-item {
+    font-size: 11px;
+}
+
+#sale .list-wrap .list-item .name {
+    font-size: 12px;
+}
+
+#sale .list-wrap .list-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+@media (min-width:992px) {
+    #sale {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 768px) {
+    #sale {
+        display: block;
+    }
+}

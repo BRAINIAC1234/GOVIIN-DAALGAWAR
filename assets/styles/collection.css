@@ -1,0 +1,172 @@
+#collection {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    padding-top: 180px;
+    padding-bottom: 80px;
+    position: relative;
+}
+
+#collection .text-wrap {
+    grid-column: span 5 / span 5;
+    display: grid;
+    margin: auto;
+    text-align: center;
+}
+
+#collection .text-wrap .btn {
+    margin: auto;
+}
+
+#collection .img-wrap {
+    grid-row: 1;
+    grid-column: span 7 / span 7;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+
+    max-height: 360px;
+    max-width: 310px;
+    margin: auto;
+}
+
+#collection .img-wrap .left {
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+#collection .img-wrap .right-top {
+    grid-column-start: 9;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+#collection .img-wrap .right-bottom {
+    grid-column-start: 9;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#collection .img-wrap img {
+    width: 100%;
+    height: 100%;
+}
+
+#collection .sale-modal {
+    position: absolute;
+    top: 0;
+    margin-top: -240px;
+    left: 0.75rem;
+    right: 0.75rem;
+    text-align: center;
+    padding: 50px 0;
+
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(238, 243, 255, 0.8) 100%);
+    backdrop-filter: blur(25px);
+    /* Note: backdrop-filter has minimal browser support */
+    border-radius: 9px;
+
+    max-width: 460px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#collection .sale-modal div:first-of-type {
+    display: grid;
+}
+
+#collection .sale-modal div:first-of-type span:first-of-type {
+    font-size: 58px;
+    font-weight: 800;
+}
+
+#collection .sale-modal div:first-of-type span:last-of-type {
+    font-weight: 400;
+    font-size: 50px;
+    margin-top: -44px;
+    text-align: center;
+    color: #e85757;
+    transform: rotate(-8.99deg);
+}
+
+#collection .sale-modal div:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+#collection .sale-modal div:nth-of-type(2) span:nth-of-type(1) {
+    align-self: center;
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+#collection .sale-modal div:nth-of-type(2) span:nth-of-type(2) {
+    font-size: 80px;
+    line-height: 86px;
+}
+
+#collection .sale-modal div:nth-of-type(2) span:nth-of-type(3) {
+    align-self: flex-end;
+    font-size: 52px;
+    line-height: 68px;
+}
+
+#collection .sale-modal div:nth-of-type(2) span:nth-of-type(4) {
+    align-self: flex-end;
+    font-size: 28px;
+}
+
+#collection .shop-btn {
+    border-radius: 10px;
+    font-size: 18px;
+    background-color: #272727;
+    color: #fff;
+    width: fit-content;
+    padding: 10px 25px;
+    margin-top: 30px !important;
+}
+
+#collection .sale-modal .shop-btn {
+    margin: auto;
+}
+
+@media (min-width: 992px) {
+    #collection .img-wrap {
+        max-height: 680px;
+        max-width: 580px;
+    }
+}
+
+@media (min-width: 768px) {
+    #collection {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+
+    #collection .text-wrap {
+        text-align: left;
+    }
+
+    #collection .img-wrap {
+        grid-row: unset;
+    }
+
+    #collection .text-wrap .btn {
+        margin: unset;
+    }
+}
+
+@media (min-width: 576px) {
+    #collection {
+        padding-top: 80px;
+    }
+
+    #collection .sale-modal {
+        display: none;
+    }
+}
